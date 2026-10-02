@@ -1,0 +1,53 @@
+{
+  "name": "dct-contract-assistant",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n web,api -c cyan,magenta \"vite\" \"tsx watch server/index.ts\"",
+    "dev:web": "vite",
+    "dev:api": "tsx watch server/index.ts",
+    "build": "tsc -p tsconfig.app.json && vite build",
+    "start": "tsx server/index.ts",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "test": "tsx --test tests/**/*.test.ts"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^4.21.0",
+    "@azure/msal-node": "^6.0.1",
+    "@azure/msal-react": "3.0.19",
+    "@microsoft/teams-js": "^2.56.0",
+    "@modelcontextprotocol/client": "^2.1.0",
+    "@modelcontextprotocol/ext-tasks": "^0.1.0",
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "jose": "^6.2.12",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.542.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.34.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.41.0",
+    "vite": "^7.1.3"
+  }
+}

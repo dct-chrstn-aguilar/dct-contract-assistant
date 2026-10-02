@@ -1,0 +1,18 @@
+services:
+  dct-contract-assistant:
+    build:
+      context: .
+      args:
+        VITE_ENTRA_CLIENT_ID: ${VITE_ENTRA_CLIENT_ID:-}
+        VITE_ENTRA_TENANT_ID: ${VITE_ENTRA_TENANT_ID:-}
+        VITE_FABRIC_SCOPE: ${VITE_FABRIC_SCOPE:-https://api.fabric.microsoft.com/.default}
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      FABRIC_MCP_URL: ${FABRIC_MCP_URL:-}
+      FABRIC_ACCESS_TOKEN: ${FABRIC_ACCESS_TOKEN:-}
+      FABRIC_WORKSPACE_ID: ${FABRIC_WORKSPACE_ID:-}
+      FABRIC_DATA_AGENT_ID: ${FABRIC_DATA_AGENT_ID:-}
+    restart: unless-stopped

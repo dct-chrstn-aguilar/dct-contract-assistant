@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
+  "version": "1.1.0",
+  "id": "fb84e3cc-345e-43a4-96ef-8c01e5200af7",
+  "developer": {
+    "name": "DCT",
+    "websiteUrl": "https://proud-mushroom-09f4b1800.6.azurestaticapps.net",
+    "privacyUrl": "https://proud-mushroom-09f4b1800.6.azurestaticapps.net/privacy.html",
+    "termsOfUseUrl": "https://proud-mushroom-09f4b1800.6.azurestaticapps.net/terms.html"
+  },
+  "name": { "short": "DCT Assistant", "full": "DCT Contract Assistant" },
+  "description": {
+    "short": "Ask questions about contracts using the assistant's managed Fabric access.",
+    "full": "Open the DCT Contract Assistant interface inside Teams. Ask questions about contract and Jira data through the published Microsoft Fabric Data Agent using the assistant's managed access."
+  },
+  "icons": { "outline": "outline.png", "color": "color.png" },
+  "accentColor": "#315E4D",
+  "staticTabs": [
+    {
+      "entityId": "dct-assistant",
+      "name": "Assistant",
+      "contentUrl": "https://proud-mushroom-09f4b1800.6.azurestaticapps.net/?host=teams",
+      "websiteUrl": "https://proud-mushroom-09f4b1800.6.azurestaticapps.net",
+      "scopes": ["personal"]
+    }
+  ],
+  "permissions": ["identity"],
+  "validDomains": ["proud-mushroom-09f4b1800.6.azurestaticapps.net"],
+  "webApplicationInfo": {
+    "id": "54a740da-a7cc-40f3-8951-247f8ff1c307",
+    "resource": "api://proud-mushroom-09f4b1800.6.azurestaticapps.net/54a740da-a7cc-40f3-8951-247f8ff1c307"
+  }
+}
